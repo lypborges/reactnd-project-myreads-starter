@@ -1,0 +1,58 @@
+.main-content {
+  margin-top: 80px;
+}
+
+.main-header {
+  position: fixed;
+  display: flex;
+  justify-content: flex-start;
+  z-index: 2;
+  width: 100%;
+}
+
+.main-title {
+  color: #fff;
+  text-align: left;
+}
+
+.bookshelf-books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.bookshelf-book {
+  margin: 10px;
+}
+
+.bookshelf-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.bookshelf-title {
+  text-align: center;
+}
+
+.filter-book-shelf {
+  display: flex;
+  justify-content: center;
+}
+
+.list-spinner {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.add-book-icon {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 50px;
+}

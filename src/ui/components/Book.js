@@ -1,39 +1,71 @@
 import React, { Component } from "react";
-import BookShelfChanger from "./BookShelfChanger";
 import PropTypes from "prop-types";
+import { Card, Radio } from "antd";
+
+const { Meta } = Card;
+
+const Authors = props => {
+  let element = <span></span>;
+  const authors = props.authors;
+  if (authors && authors.length > 0) {
+    element = props.authors.map(author => {
+      return <span key={author}>{author}</span>;
+    });
+  }
+  return element;
+};
 
 class Book extends Component {
   static propTypes = {
     book: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      authors: PropTypes.array.isRequired,
-      imageLinks: PropTypes.object.isRequired
+      title: PropTypes.string,
+      authors: PropTypes.array,
+      shelf: PropTypes.string,
+      imageLinks: PropTypes.object
     })
   };
 
+  constructor(props, defaultProps) {
+    super(props, defaultProps);
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e) {
+    this.props.handleShelfChange(e.target.value, this.props.book);
+  }
+
   render(props) {
     const { book } = this.props;
+    const { imageLinks, authors, shelf, title } = book;
+    if (!book) return;
     return (
-      <div className="book">
-        <div className="book-top">
-          <div
-            className="book-cover"
-            style={{
-              width: 128,
-              height: 193,
-              backgroundImage: `url(${book.imageLinks.thumbnail})`
-            }}
-          />
-          <BookShelfChanger />
+      <div className="bookshelf-container">
+        <Card
+          className="bookshelf-book"
+          style={{ width: 250 }}
+          cover={
+            imageLinks && (
+              <img
+                alt={title}
+                style={{
+                  width: 248,
+                  height: 193
+                }}
+                src={imageLinks.thumbnail}
+              />
+            )
+          }
+        >
+          <Meta title={title} description={<Authors authors={authors} />} />
+        </Card>
+        <div>
+          <Radio.Group value={shelf} onChange={this.handleChange}>
+            <Radio.Button value="currentlyReading">Reading</Radio.Button>
+            <Radio.Button value="wantToRead">Want to Read</Radio.Button>
+            <Radio.Button value="read">Read</Radio.Button>
+            <Radio.Button value="none">None</Radio.Button>
+          </Radio.Group>
         </div>
-        <div className="book-title">{book.title}</div>
-        {book.authors.map(author => {
-          return (
-            <div className="book-authors" key={author}>
-              {author}
-            </div>
-          );
-        })}
       </div>
     );
   }
