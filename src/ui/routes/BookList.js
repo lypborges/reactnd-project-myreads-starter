@@ -2,63 +2,39 @@ import React, { Component } from "react";
 import BookShelf from "../components/BookShelf";
 import Loading from "../components/Loading";
 import { Link } from "react-router-dom";
-import * as BooksAPI from "../../BooksAPI";
 import { Layout, Icon } from "antd";
 import "./BookList.css";
 
 const { Header, Content } = Layout;
 
 class BookList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      books: [],
-      currentlyReading: [],
-      wantToRead: [],
-      read: [],
-      loading: true
-    };
-    this.handleShelfChange = this.handleShelfChange.bind(this);
-  }
-
-  componentDidMount() {
-    BooksAPI.getAll().then(books => {
-      this.buildShelfs(books);
+  _groupShelf(books, term) {
+    return books.filter(book => {
+      return book.shelf === term;
     });
   }
 
-  buildShelfs(books) {
-    const currentlyReading = this.groupShelf(books, "currentlyReading");
-    const wantToRead = this.groupShelf(books, "wantToRead");
-    const read = this.groupShelf(books, "read");
+  _buildShelfs = books => {
+    const currentlyReading = this._groupShelf(books, "currentlyReading");
+    const wantToRead = this._groupShelf(books, "wantToRead");
+    const read = this._groupShelf(books, "read");
 
     this.setState({
       books,
       currentlyReading,
       wantToRead,
       read,
-      loading: false
+      isLoading: false
     });
-  }
-
-  groupShelf(books, term) {
-    return books.filter(book => {
-      return book.shelf === term;
-    });
-  }
-
-  handleShelfChange(shelf, book) {
-    BooksAPI.update(book, shelf).then(changedBook => {
-      const filteredBooks = this.state.books.filter(
-        item => item.id !== book.id
-      );
-      const newBooks = [...filteredBooks, Object.assign({}, book, { shelf })];
-      this.buildShelfs(newBooks);
-    });
-  }
+  };
 
   render(props) {
-    const { currentlyReading, wantToRead, read, loading } = this.state;
+    const { books, isLoading } = this.props;
+
+    const currentlyReading = this._groupShelf(books, "currentlyReading");
+    const wantToRead = this._groupShelf(books, "wantToRead");
+    const read = this._groupShelf(books, "read");
+
     return (
       <Layout>
         <Header className="main-header">
@@ -66,25 +42,25 @@ class BookList extends Component {
           <h1 className="main-title">My reads</h1>
         </Header>
         <Content className="main-content">
-          {loading && <Loading />}
-          {!loading && (
+          {isLoading && <Loading />}
+          {!isLoading && (
             <div className="list-books">
               <div className="list-books-content">
                 <div>
                   <BookShelf
                     books={currentlyReading}
                     title="Currently Reading"
-                    handleShelfChange={this.handleShelfChange}
+                    handleShelfChange={this.props.handleShelfChange}
                   />
                   <BookShelf
                     books={wantToRead}
                     title="Want to Read"
-                    handleShelfChange={this.handleShelfChange}
+                    handleShelfChange={this.props.handleShelfChange}
                   />
                   <BookShelf
                     books={read}
                     title="Read"
-                    handleShelfChange={this.handleShelfChange}
+                    handleShelfChange={this.props.handleShelfChange}
                   />
                 </div>
               </div>

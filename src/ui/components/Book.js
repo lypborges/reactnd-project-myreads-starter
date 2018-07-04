@@ -5,7 +5,7 @@ import { Card, Radio } from "antd";
 const { Meta } = Card;
 
 const Authors = props => {
-  let element = <span></span>;
+  let element = <span />;
   const authors = props.authors;
   if (authors && authors.length > 0) {
     element = props.authors.map(author => {
@@ -25,16 +25,15 @@ class Book extends Component {
     })
   };
 
-  constructor(props, defaultProps) {
-    super(props, defaultProps);
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(e) {
+  handleChange = e => {
     this.props.handleShelfChange(e.target.value, this.props.book);
-  }
+  };
 
   render(props) {
+    const bookStyle = {
+      width: 248,
+      height: 193
+    };
     const { book } = this.props;
     const { imageLinks, authors, shelf, title } = book;
     if (!book) return;
@@ -44,14 +43,13 @@ class Book extends Component {
           className="bookshelf-book"
           style={{ width: 250 }}
           cover={
-            imageLinks && (
+            imageLinks ? (
+              <img alt={title} style={bookStyle} src={imageLinks.thumbnail} />
+            ) : (
               <img
                 alt={title}
-                style={{
-                  width: 248,
-                  height: 193
-                }}
-                src={imageLinks.thumbnail}
+                style={bookStyle}
+                src="http://via.placeholder.com/248x193"
               />
             )
           }
