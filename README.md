@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/lypborges/reactnd-project-myreads-starter.svg?style=svg)](https://circleci.com/gh/lypborges/reactnd-project-myreads-starter)
+
 # MyReads Project
 
 This is the final project for the final assessment project for Udacity's React Fundamentals course.
