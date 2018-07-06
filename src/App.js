@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import BookSearch from "./ui/routes/BookSearch";
-import BookList from "./ui/routes/BookList";
+import BookSearch from "./ui/routes/booksearch/BookSearch";
+import BookList from "./ui/routes/booklist/BookList";
 import * as BooksAPI from "./BooksAPI";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { debounce } from "throttle-debounce";
@@ -20,8 +20,9 @@ class BooksApp extends Component {
   }
 
   componentDidMount() {
+    this.setState({ isLoading: true });
     BooksAPI.getAll().then(books => {
-      this.setState({ books });
+      this.setState({ books, isLoading: false });
     });
   }
 
@@ -37,10 +38,15 @@ class BooksApp extends Component {
 
   handleShelfChangeSearch = (shelf, book) => {
     BooksAPI.update(book, shelf).then(changedBook => {
-      const filteredBooks = this.state.booksSearched.filter(
-        item => item.id !== book.id
-      );
-      this.setState({ booksSearched: filteredBooks });
+      const booksSearched = this.state.booksSearched.map(item => {
+        if (item.id === book.id) {
+          return { ...item, shelf };
+        } else {
+          return item;
+        }
+      });
+      const books = [...this.state.books, { ...book, shelf }];
+      this.setState({ booksSearched, books });
     });
   };
 

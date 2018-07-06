@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import BookShelf from "../components/BookShelf";
-import Loading from "../components/Loading";
+import BookShelf from "../../components/bookshelf/BookShelf";
+import Loading from "../../components/loading/Loading";
 import { Layout } from "antd";
 import "./BookSearch.css";
 

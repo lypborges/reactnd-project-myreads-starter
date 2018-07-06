@@ -1,3 +1,5 @@
+import fetch from "isomorphic-fetch";
+
 const api = "https://reactnd-books-api.udacity.com";
 
 // Generate a unique token for storing your bookshelf data on the backend server.

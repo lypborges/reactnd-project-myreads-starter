@@ -13,7 +13,10 @@
   },
   "devDependencies": {
     "babel-plugin-import": "^1.8.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "husky": "^0.14.3",
+    "nightmare": "^3.0.1",
     "prettier": "1.13.6",
     "pretty-quick": "^1.6.0",
     "react-app-rewired": "^1.5.2",

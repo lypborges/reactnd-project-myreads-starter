@@ -1,19 +1,9 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Card, Radio } from "antd";
+import Author from "../author/Author";
 
 const { Meta } = Card;
-
-const Authors = props => {
-  let element = <span />;
-  const authors = props.authors;
-  if (authors && authors.length > 0) {
-    element = props.authors.map(author => {
-      return <span key={author}>{author}</span>;
-    });
-  }
-  return element;
-};
 
 class Book extends Component {
   static propTypes = {
@@ -30,13 +20,14 @@ class Book extends Component {
   };
 
   render(props) {
+    if (!this.props.book) return null;
+
     const bookStyle = {
       width: 248,
       height: 193
     };
     const { book } = this.props;
     const { imageLinks, authors, shelf, title } = book;
-    if (!book) return;
     return (
       <div className="bookshelf-container">
         <Card
@@ -54,7 +45,7 @@ class Book extends Component {
             )
           }
         >
-          <Meta title={title} description={<Authors authors={authors} />} />
+          <Meta title={title} description={<Author authors={authors} />} />
         </Card>
         <div>
           <Radio.Group value={shelf} onChange={this.handleChange}>

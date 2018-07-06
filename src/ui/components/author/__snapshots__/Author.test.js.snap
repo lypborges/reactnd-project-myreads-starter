@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Author layout render with authors 1`] = `
+Array [
+  <span>
+    William E. Shotts, Jr.
+</span>,
+  <span>
+    Felipe Borges Ferreira
+</span>,
+]
+`;
+
+exports[`Author layout render without authors 1`] = `<span />`;

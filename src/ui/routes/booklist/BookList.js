@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import BookShelf from "../components/BookShelf";
-import Loading from "../components/Loading";
+import BookShelf from "../../components/bookshelf/BookShelf";
+import Loading from "../../components/loading/Loading";
 import { Link } from "react-router-dom";
 import { Layout, Icon } from "antd";
 import "./BookList.css";
