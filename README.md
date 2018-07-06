@@ -2,9 +2,9 @@
 
 # MyReads Project
 
-This is the final project for the final assessment project for Udacity's React Fundamentals course.
+This is the final project for the final assessment project for Udacity's React Fundamentals course. To see the running project [MyReads](http://udacity-books.surge.sh/)
 
-## TL;DR
+## Running Local
 
 To get started developing right away:
 
