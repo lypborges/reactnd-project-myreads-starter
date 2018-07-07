@@ -65,7 +65,7 @@ exports[`renders correctly with books 1`] = `
       </div>
       <div>
         <div
-          className="ant-radio-group"
+          className="ant-radio-group ant-radio-group-small"
           id={undefined}
           onMouseEnter={undefined}
           onMouseLeave={undefined}
@@ -263,7 +263,7 @@ exports[`renders correctly with books 1`] = `
       </div>
       <div>
         <div
-          className="ant-radio-group"
+          className="ant-radio-group ant-radio-group-small"
           id={undefined}
           onMouseEnter={undefined}
           onMouseLeave={undefined}
@@ -408,6 +408,9 @@ exports[`renders correctly with books 1`] = `
         </div>
       </div>
     </div>
+    <div
+      className="ant-divider ant-divider-horizontal"
+    />
   </div>
 </div>
 `;
@@ -421,8 +424,15 @@ exports[`renders correctly without books 1`] = `
   >
     
   </h2>
-  <div
-    className="bookshelf-books"
-  />
+  <div>
+    <h3
+      className="empty-shelf"
+    >
+      Empty shelf ;(
+    </h3>
+    <div
+      className="ant-divider ant-divider-horizontal"
+    />
+  </div>
 </div>
 `;

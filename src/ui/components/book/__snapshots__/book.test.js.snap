@@ -54,7 +54,7 @@ exports[`renders correctly with book 1`] = `
   </div>
   <div>
     <div
-      className="ant-radio-group"
+      className="ant-radio-group ant-radio-group-small"
       id={undefined}
       onMouseEnter={undefined}
       onMouseLeave={undefined}

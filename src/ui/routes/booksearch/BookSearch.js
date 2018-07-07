@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+import queryString from "query-string";
 import BookShelf from "../../components/bookshelf/BookShelf";
 import Loading from "../../components/loading/Loading";
 import { Layout } from "antd";
@@ -12,10 +13,26 @@ const EmptyList = () => {
 };
 
 class BookSearch extends Component {
+  constructor(props) {
+    super(props);
+    let params = queryString.parse(this.props.location.search);
+    if (params.term) {
+      this.props.handleSearch(params.term);
+    }
+  }
+
   handleSearch = e => {
-    console.log(e.target.value);
-    this.props.handleSearch(e.target.value);
+    const term = e.target.value;
+    this.props.handleSearch(term);
+    const queryParams = queryString.stringify({ term });
+    if (term) {
+      const newRelativePathQuery = `${window.location.pathname}?${queryParams}`;
+      window.history.pushState(null, "", newRelativePathQuery);
+    } else {
+      window.history.pushState(null, "", window.location.pathname);
+    }
   };
+
   render(props) {
     const { books, isLoading, searchTerm } = this.props;
     return (
@@ -52,4 +69,4 @@ class BookSearch extends Component {
   }
 }
 
-export default BookSearch;
+export default withRouter(BookSearch);

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Book from "../book/Book";
 import PropTypes from "prop-types";
+import { Divider } from "antd";
 
 class BookShelf extends Component {
   static propTypes = {
@@ -18,17 +19,25 @@ class BookShelf extends Component {
     return (
       <div className="bookshelf">
         <h2 className="bookshelf-title">{title}</h2>
-        <div className="bookshelf-books">
-          {books.map(book => {
-            return (
-              <Book
-                key={book.id}
-                book={book}
-                handleShelfChange={this.props.handleShelfChange}
-              />
-            );
-          })}
-        </div>
+        {books.length > 0 ? (
+          <div className="bookshelf-books">
+            {books.map(book => {
+              return (
+                <Book
+                  key={book.id}
+                  book={book}
+                  handleShelfChange={this.props.handleShelfChange}
+                />
+              );
+            })}
+            <Divider orientation="center" />
+          </div>
+        ) : (
+          <div>
+            <h3 className="empty-shelf">Empty shelf ;(</h3>
+            <Divider orientation="center" />
+          </div>
+        )}
       </div>
     );
   }

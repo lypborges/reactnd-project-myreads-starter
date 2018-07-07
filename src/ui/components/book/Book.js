@@ -48,7 +48,11 @@ class Book extends Component {
           <Meta title={title} description={<Author authors={authors} />} />
         </Card>
         <div>
-          <Radio.Group value={shelf} onChange={this.handleChange}>
+          <Radio.Group
+            value={shelf}
+            size={"small"}
+            onChange={this.handleChange}
+          >
             <Radio.Button value="currentlyReading">Reading</Radio.Button>
             <Radio.Button value="wantToRead">Want to Read</Radio.Button>
             <Radio.Button value="read">Read</Radio.Button>

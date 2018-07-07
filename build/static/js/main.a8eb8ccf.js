@@ -237,7 +237,7 @@
       o = n(70),
       i = n(44),
       a = Object.defineProperty;
-    t.f = n(16)
+    t.f = n(17)
       ? Object.defineProperty
       : function(e, t, n) {
           if ((r(e), (t = i(t, !0)), r(n), o))
@@ -288,12 +288,13 @@
                 : s(e);
           };
   },
+  function(e, t) {},
   function(e, t, n) {
     var r = n(12),
       o = n(9),
       i = n(43),
       a = n(19),
-      u = n(17),
+      u = n(18),
       s = function(e, t, n) {
         var l,
           c,
@@ -369,11 +370,10 @@
       return n.call(e, t);
     };
   },
-  function(e, t) {},
   function(e, t, n) {
     var r = n(13),
       o = n(28);
-    e.exports = n(16)
+    e.exports = n(17)
       ? function(e, t, n) {
           return r.f(e, t, o(1, n));
         }
@@ -923,7 +923,7 @@
   },
   function(e, t, n) {
     var r = n(13).f,
-      o = n(17),
+      o = n(18),
       i = n(10)("toStringTag");
     e.exports = function(e, t, n) {
       e &&
@@ -1245,7 +1245,7 @@
       y = n(0),
       m = (n.n(y), n(1)),
       v = n.n(m),
-      b = n(198),
+      b = n(201),
       g = n(3),
       w = n.n(g),
       E = n(89),
@@ -1359,7 +1359,7 @@
   function(e, t, n) {
     "use strict";
     var r = n(0),
-      o = n(222);
+      o = n(225);
     if ("undefined" === typeof r)
       throw Error(
         "create-react-class could not find the React object. If you are using script tags, make sure that React is being loaded before create-react-class."
@@ -1501,7 +1501,7 @@
   },
   function(e, t, n) {
     "use strict";
-    var r = n(18),
+    var r = n(15),
       o = (n.n(r), n(119));
     n.n(o);
   },
@@ -1516,7 +1516,7 @@
   },
   function(e, t, n) {
     e.exports =
-      !n(16) &&
+      !n(17) &&
       !n(27)(function() {
         return (
           7 !=
@@ -1573,7 +1573,7 @@
   function(e, t, n) {
     "use strict";
     var r = n(33),
-      o = n(15),
+      o = n(16),
       i = n(75),
       a = n(19),
       u = n(29),
@@ -1645,7 +1645,7 @@
     e.exports = n(19);
   },
   function(e, t, n) {
-    var r = n(17),
+    var r = n(18),
       o = n(22),
       i = n(129)(!1),
       a = n(49)("IE_PROTO");
@@ -1688,10 +1688,10 @@
       o = n(28),
       i = n(22),
       a = n(44),
-      u = n(17),
+      u = n(18),
       s = n(70),
       l = Object.getOwnPropertyDescriptor;
-    t.f = n(16)
+    t.f = n(17)
       ? l
       : function(e, t) {
           if (((e = i(e)), (t = a(t, !0)), s))
@@ -2367,12 +2367,13 @@
             ? Object.setPrototypeOf(e, t)
             : (e.__proto__ = t));
     }
-    var a = n(0),
-      u = n.n(a),
-      s = n(194),
-      l = n(1),
-      c = n.n(l),
-      f = (function() {
+    var a = (n(194), n(196)),
+      u = n(0),
+      s = n.n(u),
+      l = n(197),
+      c = n(1),
+      f = n.n(c),
+      p = (function() {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
@@ -2386,7 +2387,7 @@
           return n && e(t.prototype, n), r && e(t, r), t;
         };
       })(),
-      p = (function(e) {
+      d = (function(e) {
         function t() {
           return (
             r(this, t),
@@ -2398,7 +2399,7 @@
         }
         return (
           i(t, e),
-          f(t, [
+          p(t, [
             {
               key: "render",
               value: function(e) {
@@ -2406,34 +2407,46 @@
                   n = this.props,
                   r = n.books,
                   o = n.title;
-                return u.a.createElement(
+                return s.a.createElement(
                   "div",
                   { className: "bookshelf" },
-                  u.a.createElement("h2", { className: "bookshelf-title" }, o),
-                  u.a.createElement(
-                    "div",
-                    { className: "bookshelf-books" },
-                    r.map(function(e) {
-                      return u.a.createElement(s.a, {
-                        key: e.id,
-                        book: e,
-                        handleShelfChange: t.props.handleShelfChange
-                      });
-                    })
-                  )
+                  s.a.createElement("h2", { className: "bookshelf-title" }, o),
+                  r.length > 0
+                    ? s.a.createElement(
+                        "div",
+                        { className: "bookshelf-books" },
+                        r.map(function(e) {
+                          return s.a.createElement(l.a, {
+                            key: e.id,
+                            book: e,
+                            handleShelfChange: t.props.handleShelfChange
+                          });
+                        }),
+                        s.a.createElement(a.a, { orientation: "center" })
+                      )
+                    : s.a.createElement(
+                        "div",
+                        null,
+                        s.a.createElement(
+                          "h3",
+                          { className: "empty-shelf" },
+                          "Empty shelf ;("
+                        ),
+                        s.a.createElement(a.a, { orientation: "center" })
+                      )
                 );
               }
             }
           ]),
           t
         );
-      })(a.Component);
-    (p.propTypes = {
-      books: c.a.array.isRequired,
-      title: c.a.string.isRequired
+      })(u.Component);
+    (d.propTypes = {
+      books: f.a.array.isRequired,
+      title: f.a.string.isRequired
     }),
-      (p.defaultProps = { books: [], title: "" }),
-      (t.a = p);
+      (d.defaultProps = { books: [], title: "" }),
+      (t.a = d);
   },
   function(e, t) {
     e.exports = function(e, t, n, r) {
@@ -2473,7 +2486,7 @@
       return i()(e, t, r);
     }
     t.a = r;
-    var o = n(213),
+    var o = n(216),
       i = n.n(o),
       a = n(32),
       u = n.n(a);
@@ -2652,7 +2665,7 @@
     e.exports = n;
   },
   function(e, t, n) {
-    var r = n(228),
+    var r = n(231),
       o = "object" == typeof self && self && self.Object === Object && self,
       i = r || o || Function("return this")();
     e.exports = i;
@@ -2664,7 +2677,7 @@
   },
   function(e, t, n) {
     "use strict";
-    var r = n(237),
+    var r = n(240),
       o = n.n(r),
       i = {};
     t.a = function(e, t) {
@@ -2673,8 +2686,8 @@
   },
   function(e, t, n) {
     "use strict";
-    var r = n(240),
-      o = n(245);
+    var r = n(243),
+      o = n(248);
     n.d(t, "b", function() {
       return r.a;
     }),
@@ -2698,7 +2711,7 @@
   },
   function(e, t, n) {
     "use strict";
-    var r = (n(252), n(254)),
+    var r = (n(255), n(257)),
       o = n(0),
       i = n.n(o);
     t.a = function() {
@@ -3322,7 +3335,7 @@
       i = n(32),
       a = n.n(i),
       u = n(117),
-      s = n(270);
+      s = n(273);
     n.n(s);
     a.a.render(o.a.createElement(u.a, null), document.getElementById("root"));
   },
@@ -9424,11 +9437,11 @@
     var u = n(0),
       s = n.n(u),
       l = n(118),
-      c = n(262),
-      f = n(265),
+      c = n(265),
+      f = n(268),
       p = n(58),
-      d = n(268),
-      h = n(269),
+      d = n(271),
+      h = n(272),
       y = (n.n(h),
       (function() {
         function e(e, t) {
@@ -9658,7 +9671,7 @@
       l = n(58),
       c = n(88),
       f = n(99),
-      p = n(261),
+      p = n(264),
       d = (n.n(p),
       (function() {
         function e(e, t) {
@@ -9925,8 +9938,8 @@
     };
   },
   function(e, t, n) {
-    var r = n(15);
-    r(r.S + r.F * !n(16), "Object", { defineProperty: n(13).f });
+    var r = n(16);
+    r(r.S + r.F * !n(17), "Object", { defineProperty: n(13).f });
   },
   function(e, t) {
     e.exports = function(e) {
@@ -9986,7 +9999,7 @@
     var r = n(13),
       o = n(20),
       i = n(34);
-    e.exports = n(16)
+    e.exports = n(17)
       ? Object.defineProperties
       : function(e, t) {
           o(e);
@@ -10027,7 +10040,7 @@
     e.exports = r && r.documentElement;
   },
   function(e, t, n) {
-    var r = n(17),
+    var r = n(18),
       o = n(53),
       i = n(49)("IE_PROTO"),
       a = Object.prototype;
@@ -10049,7 +10062,7 @@
   function(e, t, n) {
     "use strict";
     var r = n(43),
-      o = n(15),
+      o = n(16),
       i = n(53),
       a = n(134),
       u = n(135),
@@ -10191,7 +10204,7 @@
     n(142), (e.exports = n(9).Object.assign);
   },
   function(e, t, n) {
-    var r = n(15);
+    var r = n(16);
     r(r.S + r.F, "Object", { assign: n(143) });
   },
   function(e, t, n) {
@@ -10311,9 +10324,9 @@
   function(e, t, n) {
     "use strict";
     var r = n(12),
-      o = n(17),
-      i = n(16),
-      a = n(15),
+      o = n(18),
+      i = n(17),
+      a = n(16),
       u = n(75),
       s = n(153).KEY,
       l = n(27),
@@ -10534,7 +10547,7 @@
   function(e, t, n) {
     var r = n(35)("meta"),
       o = n(21),
-      i = n(17),
+      i = n(18),
       a = n(13).f,
       u = 0,
       s =
@@ -10633,7 +10646,7 @@
     n(162), (e.exports = n(9).Object.setPrototypeOf);
   },
   function(e, t, n) {
-    var r = n(15);
+    var r = n(16);
     r(r.S, "Object", { setPrototypeOf: n(163).set });
   },
   function(e, t, n) {
@@ -10678,7 +10691,7 @@
     };
   },
   function(e, t, n) {
-    var r = n(15);
+    var r = n(16);
     r(r.S, "Object", { create: n(47) });
   },
   function(e, t, n) {
@@ -12616,6 +12629,77 @@
   },
   function(e, t, n) {
     "use strict";
+    var r = n(15),
+      o = (n.n(r), n(195));
+    n.n(o);
+  },
+  function(e, t) {},
+  function(e, t, n) {
+    "use strict";
+    function r(e) {
+      var t,
+        n = e.prefixCls,
+        r = void 0 === n ? "ant" : n,
+        o = e.type,
+        a = void 0 === o ? "horizontal" : o,
+        l = e.orientation,
+        p = void 0 === l ? "" : l,
+        d = e.className,
+        h = e.children,
+        y = e.dashed,
+        m = f(e, [
+          "prefixCls",
+          "type",
+          "orientation",
+          "className",
+          "children",
+          "dashed"
+        ]),
+        v = p.length > 0 ? "-" + p : p,
+        b = c()(
+          d,
+          r + "-divider",
+          r + "-divider-" + a,
+          ((t = {}),
+          u()(t, r + "-divider-with-text" + v, h),
+          u()(t, r + "-divider-dashed", !!y),
+          t)
+        );
+      return s.createElement(
+        "div",
+        i()({ className: b }, m),
+        h &&
+          s.createElement("span", { className: r + "-divider-inner-text" }, h)
+      );
+    }
+    t.a = r;
+    var o = n(2),
+      i = n.n(o),
+      a = n(4),
+      u = n.n(a),
+      s = n(0),
+      l = (n.n(s), n(3)),
+      c = n.n(l),
+      f =
+        (this && this.__rest) ||
+        function(e, t) {
+          var n = {};
+          for (var r in e)
+            Object.prototype.hasOwnProperty.call(e, r) &&
+              t.indexOf(r) < 0 &&
+              (n[r] = e[r]);
+          if (null != e && "function" === typeof Object.getOwnPropertySymbols)
+            for (
+              var o = 0, r = Object.getOwnPropertySymbols(e);
+              o < r.length;
+              o++
+            )
+              t.indexOf(r[o]) < 0 && (n[r[o]] = e[r[o]]);
+          return n;
+        };
+  },
+  function(e, t, n) {
+    "use strict";
     function r(e, t) {
       if (!(e instanceof t))
         throw new TypeError("Cannot call a class as a function");
@@ -12645,13 +12729,13 @@
             ? Object.setPrototypeOf(e, t)
             : (e.__proto__ = t));
     }
-    var a = (n(195), n(197)),
-      u = (n(208), n(212)),
+    var a = (n(198), n(200)),
+      u = (n(211), n(215)),
       s = n(0),
       l = n.n(s),
       c = n(1),
       f = n.n(c),
-      p = n(251),
+      p = n(254),
       d = (function() {
         function e(e, t) {
           for (var n = 0; n < t.length; n++) {
@@ -12731,7 +12815,7 @@
                     null,
                     l.a.createElement(
                       a.a.Group,
-                      { value: i, onChange: this.handleChange },
+                      { value: i, size: "small", onChange: this.handleChange },
                       l.a.createElement(
                         a.a.Button,
                         { value: "currentlyReading" },
@@ -12765,21 +12849,21 @@
   },
   function(e, t, n) {
     "use strict";
-    var r = n(18),
-      o = (n.n(r), n(196));
+    var r = n(15),
+      o = (n.n(r), n(199));
     n.n(o);
   },
   function(e, t) {},
   function(e, t, n) {
     "use strict";
     var r = n(63),
-      o = n(206),
-      i = n(207);
+      o = n(209),
+      i = n(210);
     (r.a.Button = i.a), (r.a.Group = o.a), (t.a = r.a);
   },
   function(e, t, n) {
     "use strict";
-    var r = n(199);
+    var r = n(202);
     t.a = r.a;
   },
   function(e, t, n) {
@@ -12798,7 +12882,7 @@
       h = n.n(d),
       y = n(1),
       m = n.n(y),
-      v = n(200),
+      v = n(203),
       b = n.n(v),
       g = n(3),
       w = n.n(g),
@@ -12962,7 +13046,7 @@
     function r(e, t, n) {
       return !o(e.props, t) || !o(e.state, n);
     }
-    var o = n(201),
+    var o = n(204),
       i = {
         shouldComponentUpdate: function(e, t) {
           return r(this, e, t);
@@ -12972,7 +13056,7 @@
   },
   function(e, t, n) {
     "use strict";
-    var r = n(202);
+    var r = n(205);
     e.exports = function(e, t, n, o) {
       var i = n ? n.call(o, e, t) : void 0;
       if (void 0 !== i) return !!i;
@@ -13055,9 +13139,9 @@
           s.push(p);
       return s;
     }
-    var l = n(203),
-      c = n(204),
-      f = n(205),
+    var l = n(206),
+      c = n(207),
+      f = n(208),
       p = /^\d+$/,
       d = Object.prototype,
       h = d.hasOwnProperty,
@@ -13403,15 +13487,15 @@
   },
   function(e, t, n) {
     "use strict";
-    var r = n(18),
-      o = (n.n(r), n(209));
-    n.n(o), n(210);
+    var r = n(15),
+      o = (n.n(r), n(212));
+    n.n(o), n(213);
   },
   function(e, t) {},
   function(e, t, n) {
     "use strict";
-    var r = n(18),
-      o = (n.n(r), n(211));
+    var r = n(15),
+      o = (n.n(r), n(214));
     n.n(o);
   },
   function(e, t) {},
@@ -13436,12 +13520,12 @@
       g = n.n(b),
       w = n(90),
       E = n(37),
-      x = n(216),
-      k = n(217),
-      _ = n(218),
-      O = n(239),
-      T = n(246),
-      C = n(247),
+      x = n(219),
+      k = n(220),
+      _ = n(221),
+      O = n(242),
+      T = n(249),
+      C = n(250),
       P = n(96),
       S =
         (this && this.__decorate) ||
@@ -13867,7 +13951,7 @@
           : void 0;
     }
     Object.defineProperty(t, "__esModule", { value: !0 }), (t.default = r);
-    var o = n(214),
+    var o = n(217),
       i = (function(e) {
         return e && e.__esModule ? e : { default: e };
       })(o);
@@ -13926,7 +14010,7 @@
       this.timeStamp = e.timeStamp || Date.now();
     }
     Object.defineProperty(t, "__esModule", { value: !0 });
-    var s = n(215),
+    var s = n(218),
       l = r(s),
       c = n(26),
       f = r(c),
@@ -14192,14 +14276,14 @@
       m = n.n(y),
       v = n(0),
       b = (n.n(v), n(32)),
-      g = (n.n(b), n(219)),
-      w = n(223),
+      g = (n.n(b), n(222)),
+      w = n(226),
       E = n(92),
       x = n(3),
       k = n.n(x),
       _ = n(57),
       O = n(96),
-      T = n(238),
+      T = n(241),
       C = (function(e) {
         function t() {
           c()(this, t);
@@ -14369,7 +14453,7 @@
   },
   function(e, t, n) {
     "use strict";
-    var r = n(220),
+    var r = n(223),
       o = n(91);
     n(92);
     n.d(t, "a", function() {
@@ -14414,7 +14498,7 @@
       E = n.n(w),
       x = n(1),
       k = n.n(x),
-      _ = n(221),
+      _ = n(224),
       O = n(91),
       T = n(3),
       C = n.n(T),
@@ -14818,10 +14902,10 @@
     "use strict";
     var r = n(64),
       o = n.n(r),
-      i = n(224),
-      a = n(225),
-      u = n(235),
-      s = n(236),
+      i = n(227),
+      a = n(228),
+      u = n(238),
+      s = n(239),
       l = o()({
         displayName: "ScrollableInkTabBar",
         mixins: [s.a, u.a, i.a, a.a],
@@ -14961,7 +15045,7 @@
       s = n(0),
       l = n.n(s),
       c = n(90),
-      f = n(226),
+      f = n(229),
       p = n.n(f);
     t.a = {
       getDefaultProps: function() {
@@ -15257,8 +15341,8 @@
       );
     }
     var o = n(93),
-      i = n(227),
-      a = n(229),
+      i = n(230),
+      a = n(232),
       u = "Expected a function",
       s = Math.max,
       l = Math.min;
@@ -15291,7 +15375,7 @@
       return n || c.test(e) ? f(e.slice(2), n ? 2 : 8) : s.test(e) ? a : +e;
     }
     var o = n(93),
-      i = n(230),
+      i = n(233),
       a = NaN,
       u = /^\s+|\s+$/g,
       s = /^[-+]0x[0-9a-f]+$/i,
@@ -15304,8 +15388,8 @@
     function r(e) {
       return "symbol" == typeof e || (i(e) && o(e) == a);
     }
-    var o = n(231),
-      i = n(234),
+    var o = n(234),
+      i = n(237),
       a = "[object Symbol]";
     e.exports = r;
   },
@@ -15320,8 +15404,8 @@
           : a(e);
     }
     var o = n(95),
-      i = n(232),
-      a = n(233),
+      i = n(235),
+      a = n(236),
       u = "[object Null]",
       s = "[object Undefined]",
       l = o ? o.toStringTag : void 0;
@@ -15566,7 +15650,7 @@
           removeListener: function() {}
         };
       };
-      (window.matchMedia = window.matchMedia || _), (k = n(241));
+      (window.matchMedia = window.matchMedia || _), (k = n(244));
     }
     var O = ["xxl", "xl", "lg", "md", "sm", "xs"],
       T = {
@@ -15714,7 +15798,7 @@
       });
   },
   function(e, t, n) {
-    var r = n(242);
+    var r = n(245);
     e.exports = new r();
   },
   function(e, t, n) {
@@ -15726,7 +15810,7 @@
       (this.queries = {}),
         (this.browserIsIncapable = !window.matchMedia("only all").matches);
     }
-    var o = n(243),
+    var o = n(246),
       i = n(98),
       a = i.each,
       u = i.isFunction,
@@ -15768,7 +15852,7 @@
       }),
         this.mql.addListener(this.listener);
     }
-    var o = n(244),
+    var o = n(247),
       i = n(98).each;
     (r.prototype = {
       constuctor: r,
@@ -16026,13 +16110,13 @@
     t.a = o;
     var i = n(72),
       a = n.n(i),
-      u = n(248),
+      u = n(251),
       s = n.n(u);
   },
   function(e, t, n) {
     (function(t) {
       for (
-        var r = n(249),
+        var r = n(252),
           o = "undefined" === typeof window ? t : window,
           i = ["moz", "webkit"],
           a = "AnimationFrame",
@@ -16119,7 +16203,7 @@
                 }),
                 (o = new Date().getTime()));
       }.call(this));
-    }.call(t, n(250)));
+    }.call(t, n(253)));
   },
   function(e, t) {
     function n() {
@@ -16257,8 +16341,8 @@
   },
   function(e, t, n) {
     "use strict";
-    var r = n(18),
-      o = (n.n(r), n(253));
+    var r = n(15),
+      o = (n.n(r), n(256));
     n.n(o);
   },
   function(e, t) {},
@@ -16281,7 +16365,7 @@
       v = n.n(m),
       b = n(3),
       g = n.n(b),
-      w = n(255),
+      w = n(258),
       E = n(37),
       x =
         (this && this.__rest) ||
@@ -16493,8 +16577,8 @@
       b = n.n(v),
       g = n(1),
       w = n.n(g),
-      E = n(256),
-      x = n(257),
+      E = n(259),
+      x = n(260),
       k = n(101),
       _ = "rc_animate_" + Date.now(),
       O = (function(e) {
@@ -16836,7 +16920,7 @@
       m = n.n(y),
       v = n(1),
       b = n.n(v),
-      g = n(258),
+      g = n(261),
       w = n(101),
       E = {
         enter: "transitionEnter",
@@ -16958,8 +17042,8 @@
     });
     var a = n(14),
       u = n.n(a),
-      s = n(259),
-      l = n(260),
+      s = n(262),
+      l = n(263),
       c = n.n(l),
       f = 0 !== s.a.endEvents.length,
       p = ["Webkit", "Moz", "O", "ms"],
@@ -17179,14 +17263,14 @@
             ? Object.setPrototypeOf(e, t)
             : (e.__proto__ = t));
     }
-    var a = (n(263), n(57)),
+    var a = (n(266), n(57)),
       u = (n(67), n(68)),
       s = n(0),
       l = n.n(s),
       c = n(88),
       f = n(99),
       p = n(58),
-      d = n(264),
+      d = n(267),
       h = (n.n(d),
       (function() {
         function e(e, t) {
@@ -17326,7 +17410,7 @@
   },
   function(e, t, n) {
     "use strict";
-    var r = n(18);
+    var r = n(15);
     n.n(r);
   },
   function(e, t) {},
@@ -17341,7 +17425,7 @@
       n.d(t, "b", function() {
         return c;
       });
-    var r = n(266),
+    var r = n(269),
       o = n.n(r),
       i = "https://reactnd-books-api.udacity.com",
       a = localStorage.token;
@@ -17383,7 +17467,7 @@
       };
   },
   function(e, t, n) {
-    n(267), (e.exports = self.fetch.bind(self));
+    n(270), (e.exports = self.fetch.bind(self));
   },
   function(e, t) {
     !(function(e) {
@@ -17796,4 +17880,4 @@
   function(e, t) {},
   function(e, t) {}
 ]);
-//# sourceMappingURL=main.348ca330.js.map
+//# sourceMappingURL=main.a8eb8ccf.js.map
