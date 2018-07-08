@@ -1,54 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1530882040870" clover="3.2.0">
-  <project timestamp="1530882040870" name="All files">
-    <metrics statements="119" coveredstatements="40" conditionals="46" coveredconditionals="15" methods="47" coveredmethods="8" elements="212" coveredelements="63" complexity="0" loc="119" ncloc="119" packages="8" files="12" classes="12">
+<coverage generated="1531017239732" clover="3.2.0">
+  <project timestamp="1531017239732" name="All files">
+    <metrics statements="158" coveredstatements="55" conditionals="62" coveredconditionals="16" methods="65" coveredmethods="10" elements="285" coveredelements="81" complexity="0" loc="158" ncloc="158" packages="10" files="15" classes="15">
       <package name="src">
-        <metrics statements="76" coveredstatements="14" conditionals="20" coveredconditionals="1" methods="32" coveredmethods="1"/>
+        <metrics statements="64" coveredstatements="14" conditionals="14" coveredconditionals="1" methods="31" coveredmethods="1"/>
         <file name="App.js" path="/Users/felipeborges/GitHub/Udacity/reactnd-project-myreads-starter/src/App.js">
-          <metrics statements="43" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="16" coveredmethods="0"/>
-          <line num="11" count="0" type="stmt"/>
+          <metrics statements="31" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="15" coveredmethods="0"/>
           <line num="12" count="0" type="stmt"/>
-          <line num="19" count="0" type="stmt"/>
-          <line num="23" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="20" count="0" type="stmt"/>
           <line num="24" count="0" type="stmt"/>
           <line num="25" count="0" type="stmt"/>
-          <line num="30" count="0" type="stmt"/>
+          <line num="26" count="0" type="stmt"/>
           <line num="31" count="0" type="stmt"/>
           <line num="32" count="0" type="stmt"/>
-          <line num="34" count="0" type="stmt"/>
+          <line num="33" count="0" type="stmt"/>
           <line num="35" count="0" type="stmt"/>
-          <line num="40" count="0" type="stmt"/>
+          <line num="36" count="0" type="stmt"/>
           <line num="41" count="0" type="stmt"/>
-          <line num="42" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="43" count="0" type="stmt"/>
-          <line num="45" count="0" type="stmt"/>
-          <line num="48" count="0" type="stmt"/>
+          <line num="42" count="0" type="stmt"/>
+          <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="44" count="0" type="stmt"/>
+          <line num="46" count="0" type="stmt"/>
           <line num="49" count="0" type="stmt"/>
-          <line num="54" count="0" type="stmt"/>
-          <line num="58" count="0" type="stmt"/>
+          <line num="50" count="0" type="stmt"/>
+          <line num="55" count="0" type="stmt"/>
+          <line num="59" count="0" type="stmt"/>
           <line num="63" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="64" count="0" type="stmt"/>
+          <line num="65" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="66" count="0" type="stmt"/>
-          <line num="67" count="0" type="stmt"/>
-          <line num="69" count="0" type="stmt"/>
-          <line num="70" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="71" count="0" type="stmt"/>
+          <line num="68" count="0" type="stmt"/>
           <line num="72" count="0" type="stmt"/>
-          <line num="75" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="76" count="0" type="stmt"/>
-          <line num="78" count="0" type="stmt"/>
           <line num="81" count="0" type="stmt"/>
-          <line num="85" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="86" count="0" type="stmt"/>
-          <line num="87" count="0" type="cond" truecount="0" falsecount="2"/>
-          <line num="88" count="0" type="stmt"/>
-          <line num="90" count="0" type="stmt"/>
-          <line num="91" count="0" type="stmt"/>
-          <line num="95" count="0" type="stmt"/>
+          <line num="82" count="0" type="stmt"/>
+          <line num="89" count="0" type="stmt"/>
           <line num="100" count="0" type="stmt"/>
-          <line num="101" count="0" type="stmt"/>
-          <line num="108" count="0" type="stmt"/>
-          <line num="119" count="0" type="stmt"/>
         </file>
         <file name="BooksAPI.js" path="/Users/felipeborges/GitHub/Udacity/reactnd-project-myreads-starter/src/BooksAPI.js">
           <metrics statements="20" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="11" coveredmethods="0"/>
@@ -93,18 +81,25 @@
           <line num="22" count="6" type="stmt"/>
         </file>
       </package>
+      <package name="src.tests.acceptance">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="BookList.js" path="/Users/felipeborges/GitHub/Udacity/reactnd-project-myreads-starter/src/tests/acceptance/BookList.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+      </package>
       <package name="src.tests.helpers">
-        <metrics statements="5" coveredstatements="5" conditionals="8" coveredconditionals="7" methods="1" coveredmethods="1"/>
+        <metrics statements="6" coveredstatements="2" conditionals="12" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <file name="BookStore.js" path="/Users/felipeborges/GitHub/Udacity/reactnd-project-myreads-starter/src/tests/helpers/BookStore.js">
           <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
           <line num="1" count="2" type="stmt"/>
           <line num="102" count="2" type="stmt"/>
         </file>
         <file name="visit.js" path="/Users/felipeborges/GitHub/Udacity/reactnd-project-myreads-starter/src/tests/helpers/visit.js">
-          <metrics statements="3" coveredstatements="3" conditionals="8" coveredconditionals="7" methods="1" coveredmethods="1"/>
-          <line num="4" count="1" type="stmt"/>
-          <line num="11" count="1" type="stmt"/>
-          <line num="13" count="1" type="stmt"/>
+          <metrics statements="4" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="2" coveredmethods="0"/>
+          <line num="1" count="0" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="14" count="0" type="cond" truecount="0" falsecount="10"/>
         </file>
       </package>
       <package name="src.ui.components.author">
@@ -135,12 +130,12 @@
         </file>
       </package>
       <package name="src.ui.components.bookshelf">
-        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <file name="BookShelf.js" path="/Users/felipeborges/GitHub/Udacity/reactnd-project-myreads-starter/src/ui/components/bookshelf/BookShelf.js">
-          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-          <line num="17" count="2" type="stmt"/>
+          <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
           <line num="18" count="2" type="stmt"/>
-          <line num="23" count="2" type="stmt"/>
+          <line num="19" count="2" type="stmt"/>
+          <line num="25" count="2" type="stmt"/>
         </file>
       </package>
       <package name="src.ui.components.loading">
@@ -151,34 +146,93 @@
         </file>
       </package>
       <package name="src.ui.routes.booklist">
-        <metrics statements="12" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <metrics statements="16" coveredstatements="3" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
         <file name="BookList.js" path="/Users/felipeborges/GitHub/Udacity/reactnd-project-myreads-starter/src/ui/routes/booklist/BookList.js">
-          <metrics statements="12" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="0"/>
+          <metrics statements="16" coveredstatements="3" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
           <line num="8" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="11" count="0" type="stmt"/>
+          <line num="25" count="1" type="stmt"/>
+          <line num="26" count="0" type="stmt"/>
+          <line num="51" count="0" type="stmt"/>
+          <line num="52" count="0" type="stmt"/>
+          <line num="57" count="0" type="stmt"/>
+          <line num="58" count="0" type="stmt"/>
+          <line num="59" count="0" type="stmt"/>
+          <line num="61" count="0" type="stmt"/>
+          <line num="71" count="0" type="stmt"/>
+          <line num="72" count="0" type="stmt"/>
+          <line num="73" count="0" type="stmt"/>
+          <line num="74" count="0" type="stmt"/>
+          <line num="76" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.ui.routes.booksearch">
+        <metrics statements="16" coveredstatements="2" conditionals="10" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <file name="BookSearch.js" path="/Users/felipeborges/GitHub/Udacity/reactnd-project-myreads-starter/src/ui/routes/booksearch/BookSearch.js">
+          <metrics statements="16" coveredstatements="2" conditionals="10" coveredconditionals="0" methods="4" coveredmethods="0"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
           <line num="12" count="0" type="stmt"/>
-          <line num="13" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
+          <line num="18" count="0" type="stmt"/>
+          <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="20" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="26" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="28" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="29" count="0" type="stmt"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="32" count="0" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
+          <line num="38" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.utils">
+        <metrics statements="37" coveredstatements="16" conditionals="12" coveredconditionals="6" methods="15" coveredmethods="3"/>
+        <file name="BooksAPI.js" path="/Users/felipeborges/GitHub/Udacity/reactnd-project-myreads-starter/src/utils/BooksAPI.js">
+          <metrics statements="21" coveredstatements="0" conditionals="6" coveredconditionals="0" methods="12" coveredmethods="0"/>
+          <line num="1" count="0" type="cond" truecount="0" falsecount="4"/>
+          <line num="3" count="0" type="stmt"/>
+          <line num="6" count="0" type="stmt"/>
+          <line num="7" count="0" type="cond" truecount="0" falsecount="2"/>
+          <line num="8" count="0" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="17" count="0" type="stmt"/>
           <line num="18" count="0" type="stmt"/>
           <line num="19" count="0" type="stmt"/>
           <line num="20" count="0" type="stmt"/>
           <line num="22" count="0" type="stmt"/>
-          <line num="32" count="0" type="stmt"/>
-          <line num="34" count="0" type="stmt"/>
+          <line num="23" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="27" count="0" type="stmt"/>
+          <line num="28" count="0" type="stmt"/>
           <line num="35" count="0" type="stmt"/>
-          <line num="36" count="0" type="stmt"/>
+          <line num="37" count="0" type="stmt"/>
           <line num="38" count="0" type="stmt"/>
+          <line num="46" count="0" type="stmt"/>
+          <line num="47" count="0" type="stmt"/>
         </file>
-      </package>
-      <package name="src.ui.routes.booksearch">
-        <metrics statements="7" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0"/>
-        <file name="BookSearch.js" path="/Users/felipeborges/GitHub/Udacity/reactnd-project-myreads-starter/src/ui/routes/booksearch/BookSearch.js">
-          <metrics statements="7" coveredstatements="2" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0"/>
-          <line num="8" count="1" type="stmt"/>
-          <line num="10" count="1" type="stmt"/>
-          <line num="11" count="0" type="stmt"/>
-          <line num="16" count="0" type="stmt"/>
-          <line num="17" count="0" type="stmt"/>
-          <line num="20" count="0" type="stmt"/>
-          <line num="21" count="0" type="stmt"/>
+        <file name="BooksHelper.js" path="/Users/felipeborges/GitHub/Udacity/reactnd-project-myreads-starter/src/utils/BooksHelper.js">
+          <metrics statements="16" coveredstatements="16" conditionals="6" coveredconditionals="6" methods="3" coveredmethods="3"/>
+          <line num="2" count="2" type="stmt"/>
+          <line num="3" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="1" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="9" count="2" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="14" count="2" type="stmt"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="16" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="17" count="1" type="stmt"/>
+          <line num="22" count="2" type="stmt"/>
+          <line num="23" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="24" count="1" type="stmt"/>
+          <line num="26" count="1" type="stmt"/>
         </file>
       </package>
     </metrics>

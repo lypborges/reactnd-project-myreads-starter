@@ -5,6 +5,8 @@
 version: 2
 jobs:
   build:
+    environment:
+      CC_TEST_REPORTER_ID: 2ae7f2c376b9f78fe0321543858fe6cba3ebe0a81b53854e9a106509b35b7294
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10
@@ -18,7 +20,16 @@ jobs:
 
     steps:
       - checkout
-
+      - run:
+          name: Setup dependencies
+          command: |
+            sudo composer self-update
+            composer install -n --prefer-dist
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -34,4 +45,7 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: yarn test -- -u
+      - run: |
+        ./cc-test-reporter before-build
+        yarn test -- -u --coverage
+        ./cc-test-reporter after-build
