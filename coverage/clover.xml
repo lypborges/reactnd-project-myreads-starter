@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1531017239732" clover="3.2.0">
-  <project timestamp="1531017239732" name="All files">
-    <metrics statements="158" coveredstatements="55" conditionals="62" coveredconditionals="16" methods="65" coveredmethods="10" elements="285" coveredelements="81" complexity="0" loc="158" ncloc="158" packages="10" files="15" classes="15">
+<coverage generated="1531091673894" clover="3.2.0">
+  <project timestamp="1531091673894" name="All files">
+    <metrics statements="152" coveredstatements="53" conditionals="50" coveredconditionals="16" methods="63" coveredmethods="10" elements="265" coveredelements="79" complexity="0" loc="152" ncloc="152" packages="8" files="12" classes="12">
       <package name="src">
         <metrics statements="64" coveredstatements="14" conditionals="14" coveredconditionals="1" methods="31" coveredmethods="1"/>
         <file name="App.js" path="/Users/felipeborges/GitHub/Udacity/reactnd-project-myreads-starter/src/App.js">
@@ -79,27 +79,6 @@
           <line num="14" count="0" type="stmt"/>
           <line num="17" count="0" type="stmt"/>
           <line num="22" count="6" type="stmt"/>
-        </file>
-      </package>
-      <package name="src.tests.acceptance">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <file name="BookList.js" path="/Users/felipeborges/GitHub/Udacity/reactnd-project-myreads-starter/src/tests/acceptance/BookList.js">
-          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        </file>
-      </package>
-      <package name="src.tests.helpers">
-        <metrics statements="6" coveredstatements="2" conditionals="12" coveredconditionals="0" methods="2" coveredmethods="0"/>
-        <file name="BookStore.js" path="/Users/felipeborges/GitHub/Udacity/reactnd-project-myreads-starter/src/tests/helpers/BookStore.js">
-          <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-          <line num="1" count="2" type="stmt"/>
-          <line num="102" count="2" type="stmt"/>
-        </file>
-        <file name="visit.js" path="/Users/felipeborges/GitHub/Udacity/reactnd-project-myreads-starter/src/tests/helpers/visit.js">
-          <metrics statements="4" coveredstatements="0" conditionals="12" coveredconditionals="0" methods="2" coveredmethods="0"/>
-          <line num="1" count="0" type="stmt"/>
-          <line num="11" count="0" type="stmt"/>
-          <line num="13" count="0" type="stmt"/>
-          <line num="14" count="0" type="cond" truecount="0" falsecount="10"/>
         </file>
       </package>
       <package name="src.ui.components.author">

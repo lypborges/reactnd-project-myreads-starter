@@ -28,5 +28,11 @@
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject",
     "precommit": "pretty-quick --changed"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!src/tests/**"
+    ]
   }
 }
