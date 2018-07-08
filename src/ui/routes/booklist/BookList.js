@@ -7,6 +7,37 @@ import "./BookList.css";
 
 const { Header, Content } = Layout;
 
+const Shelfs = props => {
+  return (
+    <div className="list-books">
+      <div className="list-books-content">
+        <div>
+          <BookShelf
+            books={props.currentlyReading}
+            title="Currently Reading"
+            handleShelfChange={props.handleShelfChange}
+          />
+          <BookShelf
+            books={props.wantToRead}
+            title="Want to Read"
+            handleShelfChange={props.handleShelfChange}
+          />
+          <BookShelf
+            books={props.read}
+            title="Read"
+            handleShelfChange={props.handleShelfChange}
+          />
+        </div>
+      </div>
+      <div className="open-search">
+        <Link to="/search">
+          <Icon type="plus-circle" className="add-book-icon" />
+        </Link>
+      </div>
+    </div>
+  );
+};
+
 class BookList extends Component {
   _groupShelf(books, term) {
     return books.filter(book => {
@@ -29,8 +60,7 @@ class BookList extends Component {
   };
 
   render(props) {
-    const { books, isLoading } = this.props;
-
+    const { books, isLoading, handleShelfChange } = this.props;
     const currentlyReading = this._groupShelf(books, "currentlyReading");
     const wantToRead = this._groupShelf(books, "wantToRead");
     const read = this._groupShelf(books, "read");
@@ -44,32 +74,12 @@ class BookList extends Component {
         <Content className="main-content">
           {isLoading && <Loading />}
           {!isLoading && (
-            <div className="list-books">
-              <div className="list-books-content">
-                <div>
-                  <BookShelf
-                    books={currentlyReading}
-                    title="Currently Reading"
-                    handleShelfChange={this.props.handleShelfChange}
-                  />
-                  <BookShelf
-                    books={wantToRead}
-                    title="Want to Read"
-                    handleShelfChange={this.props.handleShelfChange}
-                  />
-                  <BookShelf
-                    books={read}
-                    title="Read"
-                    handleShelfChange={this.props.handleShelfChange}
-                  />
-                </div>
-              </div>
-              <div className="open-search">
-                <Link to="/search">
-                  <Icon type="plus-circle" className="add-book-icon" />
-                </Link>
-              </div>
-            </div>
+            <Shelfs
+              currentlyReading={currentlyReading}
+              wantToRead={wantToRead}
+              read={read}
+              handleShelfChange={handleShelfChange}
+            />
           )}
         </Content>
       </Layout>
