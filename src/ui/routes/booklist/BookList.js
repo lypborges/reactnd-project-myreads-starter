@@ -7,34 +7,42 @@ import "./BookList.css";
 
 const { Header, Content } = Layout;
 
-const Shelfs = props => {
+const ShelfContainer = props => {
   return (
     <div className="list-books">
       <div className="list-books-content">
-        <div>
-          <BookShelf
-            books={props.currentlyReading}
-            title="Currently Reading"
-            handleShelfChange={props.handleShelfChange}
-          />
-          <BookShelf
-            books={props.wantToRead}
-            title="Want to Read"
-            handleShelfChange={props.handleShelfChange}
-          />
-          <BookShelf
-            books={props.read}
-            title="Read"
-            handleShelfChange={props.handleShelfChange}
-          />
+        {props.children}
+        <div className="open-search">
+          <Link to="/search">
+            <Icon type="plus-circle" className="add-book-icon" />
+          </Link>
         </div>
       </div>
-      <div className="open-search">
-        <Link to="/search">
-          <Icon type="plus-circle" className="add-book-icon" />
-        </Link>
-      </div>
     </div>
+  );
+};
+
+const Shelfs = props => {
+  return (
+    <ShelfContainer>
+      <div>
+        <BookShelf
+          books={props.currentlyReading}
+          title="Currently Reading"
+          handleShelfChange={props.handleShelfChange}
+        />
+        <BookShelf
+          books={props.wantToRead}
+          title="Want to Read"
+          handleShelfChange={props.handleShelfChange}
+        />
+        <BookShelf
+          books={props.read}
+          title="Read"
+          handleShelfChange={props.handleShelfChange}
+        />
+      </div>
+    </ShelfContainer>
   );
 };
 
