@@ -1,8 +1,4 @@
-[![CircleCI](https://circleci.com/gh/lypborges/reactnd-project-myreads-starter.svg?style=svg)](https://circleci.com/gh/lypborges/reactnd-project-myreads-starter)
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/33ecf000bb609dfa2124/maintainability)](https://codeclimate.com/github/lypborges/reactnd-project-myreads-starter/maintainability)
-
-[![Test Coverage](https://api.codeclimate.com/v1/badges/33ecf000bb609dfa2124/test_coverage)](https://codeclimate.com/github/lypborges/reactnd-project-myreads-starter/test_coverage)
+[![CircleCI](https://circleci.com/gh/lypborges/reactnd-project-myreads-starter.svg?style=svg)](https://circleci.com/gh/lypborges/reactnd-project-myreads-starter) [![Maintainability](https://api.codeclimate.com/v1/badges/33ecf000bb609dfa2124/maintainability)](https://codeclimate.com/github/lypborges/reactnd-project-myreads-starter/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/33ecf000bb609dfa2124/test_coverage)](https://codeclimate.com/github/lypborges/reactnd-project-myreads-starter/test_coverage)
 
 # MyReads Project
 
