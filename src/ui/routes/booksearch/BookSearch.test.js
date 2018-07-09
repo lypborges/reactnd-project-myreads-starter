@@ -20,7 +20,7 @@ describe("Loading component layout", () => {
     const tree = renderer
       .create(
         <MemoryRouter>
-          <BookSearch />
+          <BookSearch books={[]} />
         </MemoryRouter>
       )
       .toJSON();

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Loading component layout render 1`] = `
+exports[`Loading component layout render with books 1`] = `
 <div
   className="ant-layout"
 >
@@ -241,6 +241,114 @@ exports[`Loading component layout render 1`] = `
                   </div>
                 </div>
               </div>
+              <div
+                className="ant-divider ant-divider-horizontal"
+              />
+            </div>
+          </div>
+          <div
+            className="bookshelf"
+          >
+            <h2
+              className="bookshelf-title"
+            >
+              Want to Read
+            </h2>
+            <div>
+              <h3
+                className="empty-shelf"
+              >
+                Empty shelf ;(
+              </h3>
+              <div
+                className="ant-divider ant-divider-horizontal"
+              />
+            </div>
+          </div>
+          <div
+            className="bookshelf"
+          >
+            <h2
+              className="bookshelf-title"
+            >
+              Read
+            </h2>
+            <div>
+              <h3
+                className="empty-shelf"
+              >
+                Empty shelf ;(
+              </h3>
+              <div
+                className="ant-divider ant-divider-horizontal"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="open-search"
+        >
+          <a
+            href="/search"
+            onClick={[Function]}
+          >
+            <i
+              className="anticon anticon-plus-circle add-book-icon"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Loading component layout render without books 1`] = `
+<div
+  className="ant-layout"
+>
+  <div
+    className="main-header ant-layout-header"
+  >
+    <i
+      className="anticon anticon-book"
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 50,
+        }
+      }
+    />
+    <h1
+      className="main-title"
+    >
+      My reads
+    </h1>
+  </div>
+  <div
+    className="main-content ant-layout-content"
+  >
+    <div
+      className="list-books"
+    >
+      <div
+        className="list-books-content"
+      >
+        <div>
+          <div
+            className="bookshelf"
+          >
+            <h2
+              className="bookshelf-title"
+            >
+              Currently Reading
+            </h2>
+            <div>
+              <h3
+                className="empty-shelf"
+              >
+                Empty shelf ;(
+              </h3>
               <div
                 className="ant-divider ant-divider-horizontal"
               />

@@ -48,24 +48,14 @@ const Shelfs = props => {
 
 class BookList extends Component {
   _groupShelf(books, term) {
+    if (!books) {
+      return [];
+    }
+
     return books.filter(book => {
       return book.shelf === term;
     });
   }
-
-  _buildShelfs = books => {
-    const currentlyReading = this._groupShelf(books, "currentlyReading");
-    const wantToRead = this._groupShelf(books, "wantToRead");
-    const read = this._groupShelf(books, "read");
-
-    this.setState({
-      books,
-      currentlyReading,
-      wantToRead,
-      read,
-      isLoading: false
-    });
-  };
 
   render(props) {
     const { books, isLoading, handleShelfChange } = this.props;
