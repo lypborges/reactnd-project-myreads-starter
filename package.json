@@ -34,7 +34,7 @@
       "!src/tests/**",
       "!src/setupTests.js",
       "!src/utils/BooksAPI.js",
-      "!index.js"
+      "!src/index.js"
     ]
   }
 }

@@ -31,7 +31,6 @@ class BookSearch extends Component {
     } else {
       window.history.pushState(null, "", window.location.pathname);
     }
-    console.log("inside handleSearch");
   };
 
   render(props) {
