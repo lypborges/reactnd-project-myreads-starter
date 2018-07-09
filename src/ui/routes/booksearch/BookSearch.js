@@ -31,6 +31,7 @@ class BookSearch extends Component {
     } else {
       window.history.pushState(null, "", window.location.pathname);
     }
+    console.log("inside handleSearch");
   };
 
   render(props) {
@@ -45,6 +46,7 @@ class BookSearch extends Component {
               </Link>
               <div className="search-books-input-wrapper">
                 <input
+                  data-test="input-search"
                   type="text"
                   value={searchTerm}
                   onChange={this.handleSearch}

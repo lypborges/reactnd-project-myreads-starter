@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">43.75% </span>
+        <span class="strong">87.5% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>7/16</span>
+        <span class='fraction'>14/16</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">58.33% </span>
+        <span class="strong">75% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>7/12</span>
+        <span class='fraction'>9/12</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>2/4</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">43.75% </span>
+        <span class="strong">87.5% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>7/16</span>
+        <span class='fraction'>14/16</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -119,7 +119,8 @@
 <a name='L71'></a><a href='#L71'>71</a>
 <a name='L72'></a><a href='#L72'>72</a>
 <a name='L73'></a><a href='#L73'>73</a>
-<a name='L74'></a><a href='#L74'>74</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -130,33 +131,34 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -202,8 +204,8 @@ import "./BookSearch.css";
 &nbsp;
 const { Content } = Layout;
 &nbsp;
-const EmptyList = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >  return &lt;div className="empty-result"&gt; &lt;/div&gt;;</span>
+const EmptyList = () =&gt; {
+  return &lt;div className="empty-result"&gt; &lt;/div&gt;;
 };
 &nbsp;
 class BookSearch extends Component {
@@ -215,13 +217,13 @@ class BookSearch extends Component {
     }
   }
 &nbsp;
-  handleSearch = <span class="fstat-no" title="function not covered" >e </span>=&gt; {
-    const term = <span class="cstat-no" title="statement not covered" >e.target.value;</span>
-<span class="cstat-no" title="statement not covered" >    this.props.handleSearch(term);</span>
-    const queryParams = <span class="cstat-no" title="statement not covered" >queryString.stringify({ term });</span>
-<span class="cstat-no" title="statement not covered" >    if (term) {</span>
-      const newRelativePathQuery = <span class="cstat-no" title="statement not covered" >`${window.location.pathname}?${queryParams}`;</span>
-<span class="cstat-no" title="statement not covered" >      window.history.pushState(null, "", newRelativePathQuery);</span>
+  handleSearch = e =&gt; {
+    const term = e.target.value;
+    this.props.handleSearch(term);
+    const queryParams = queryString.stringify({ term });
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (term) {
+      const newRelativePathQuery = `${window.location.pathname}?${queryParams}`;
+      window.history.pushState(null, "", newRelativePathQuery);
     } else {
 <span class="cstat-no" title="statement not covered" >      window.history.pushState(null, "", window.location.pathname);</span>
     }
@@ -239,6 +241,7 @@ class BookSearch extends Component {
               &lt;/Link&gt;
               &lt;div className="search-books-input-wrapper"&gt;
                 &lt;input
+                  data-test="input-search"
                   type="text"
                   value={searchTerm}
                   onChange={this.handleSearch}
@@ -248,7 +251,7 @@ class BookSearch extends Component {
             &lt;/div&gt;
             &lt;div className="search-books-results"&gt;
               {isLoading &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;Loading /&gt;}</span>
-              {books &amp;&amp; books.length === 0 &amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >&lt;EmptyList /&gt;}</span>
+              {books &amp;&amp; books.length === 0 &amp;&amp; &lt;EmptyList /&gt;}
               {books &amp;&amp;
                 books.length &gt; 0 &amp;&amp; (
                   &lt;BookShelf
@@ -271,7 +274,7 @@ export default withRouter(BookSearch);
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Jul 09 2018 14:11:55 GMT-0300 (Brasilia Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Jul 09 2018 14:46:38 GMT-0300 (Brasilia Standard Time)
 </div>
 </div>
 <script src="../../../../prettify.js"></script>

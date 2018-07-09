@@ -24,6 +24,7 @@ exports[`Loading component layout render with books 1`] = `
           className="search-books-input-wrapper"
         >
           <input
+            data-test="input-search"
             onChange={[Function]}
             placeholder="Search by title or author"
             type="text"
@@ -476,6 +477,7 @@ exports[`Loading component layout render without books 1`] = `
           className="search-books-input-wrapper"
         >
           <input
+            data-test="input-search"
             onChange={[Function]}
             placeholder="Search by title or author"
             type="text"
