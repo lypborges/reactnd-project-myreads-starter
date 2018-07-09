@@ -33,7 +33,8 @@
       "src/**/*.{js,jsx}",
       "!src/tests/**",
       "!src/setupTests.js",
-      "!src/utils/BooksAPI.js"
+      "!src/utils/BooksAPI.js",
+      "!index.js"
     ]
   }
 }
