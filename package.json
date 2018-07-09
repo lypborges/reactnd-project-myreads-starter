@@ -16,7 +16,6 @@
     "babel-plugin-import": "^1.8.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "nightmare": "^3.0.1",
     "prettier": "1.13.6",
     "pretty-quick": "^1.6.0",
     "react-app-rewired": "^1.5.2",
@@ -32,7 +31,9 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
-      "!src/tests/**"
+      "!src/tests/**",
+      "!src/setupTests.js",
+      "!src/utils/BooksAPI.js"
     ]
   }
 }

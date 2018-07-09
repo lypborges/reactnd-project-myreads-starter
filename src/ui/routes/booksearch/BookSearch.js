@@ -54,13 +54,14 @@ class BookSearch extends Component {
             </div>
             <div className="search-books-results">
               {isLoading && <Loading />}
-              {books.length === 0 && <EmptyList />}
-              {books.length > 0 && (
-                <BookShelf
-                  books={books}
-                  handleShelfChange={this.props.handleShelfChange}
-                />
-              )}
+              {books && books.length === 0 && <EmptyList />}
+              {books &&
+                books.length > 0 && (
+                  <BookShelf
+                    books={books}
+                    handleShelfChange={this.props.handleShelfChange}
+                  />
+                )}
             </div>
           </div>
         </Content>

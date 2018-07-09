@@ -1,0 +1,304 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading component layout render 1`] = `
+<div
+  className="ant-layout"
+>
+  <div
+    className="main-header ant-layout-header"
+  >
+    <i
+      className="anticon anticon-book"
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 50,
+        }
+      }
+    />
+    <h1
+      className="main-title"
+    >
+      My reads
+    </h1>
+  </div>
+  <div
+    className="main-content ant-layout-content"
+  >
+    <div
+      className="list-books"
+    >
+      <div
+        className="list-books-content"
+      >
+        <div>
+          <div
+            className="bookshelf"
+          >
+            <h2
+              className="bookshelf-title"
+            >
+              Currently Reading
+            </h2>
+            <div
+              className="bookshelf-books"
+            >
+              <div
+                className="bookshelf-container"
+              >
+                <div
+                  className="ant-card bookshelf-book ant-card-bordered"
+                  style={
+                    Object {
+                      "width": 250,
+                    }
+                  }
+                >
+                  <div
+                    className="ant-card-cover"
+                  >
+                    <img
+                      alt="The Linux Command Line"
+                      src="http://books.google.com/books/content?id=nggnmAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+                      style={
+                        Object {
+                          "height": 193,
+                          "width": 248,
+                        }
+                      }
+                    />
+                  </div>
+                  <div
+                    className="ant-card-body"
+                    style={Object {}}
+                  >
+                    <div
+                      className="ant-card-meta"
+                    >
+                      <div
+                        className="ant-card-meta-detail"
+                      >
+                        <div
+                          className="ant-card-meta-title"
+                        >
+                          The Linux Command Line
+                        </div>
+                        <div
+                          className="ant-card-meta-description"
+                        >
+                          <span>
+                            William E. Shotts, Jr.
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div
+                    className="ant-radio-group ant-radio-group-small"
+                    id={undefined}
+                    onMouseEnter={undefined}
+                    onMouseLeave={undefined}
+                    style={undefined}
+                  >
+                    <label
+                      className="ant-radio-button-wrapper ant-radio-button-wrapper-checked"
+                      onMouseEnter={undefined}
+                      onMouseLeave={undefined}
+                      style={undefined}
+                    >
+                      <span
+                        className="ant-radio-button ant-radio-button-checked"
+                        style={Object {}}
+                      >
+                        <input
+                          autoFocus={undefined}
+                          checked={true}
+                          className="ant-radio-button-input"
+                          disabled={false}
+                          id={undefined}
+                          name={undefined}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onClick={undefined}
+                          onFocus={[Function]}
+                          readOnly={undefined}
+                          tabIndex={undefined}
+                          type="radio"
+                          value="currentlyReading"
+                        />
+                        <span
+                          className="ant-radio-button-inner"
+                        />
+                      </span>
+                      <span>
+                        Reading
+                      </span>
+                    </label>
+                    <label
+                      className="ant-radio-button-wrapper"
+                      onMouseEnter={undefined}
+                      onMouseLeave={undefined}
+                      style={undefined}
+                    >
+                      <span
+                        className="ant-radio-button"
+                        style={Object {}}
+                      >
+                        <input
+                          autoFocus={undefined}
+                          checked={false}
+                          className="ant-radio-button-input"
+                          disabled={false}
+                          id={undefined}
+                          name={undefined}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onClick={undefined}
+                          onFocus={[Function]}
+                          readOnly={undefined}
+                          tabIndex={undefined}
+                          type="radio"
+                          value="wantToRead"
+                        />
+                        <span
+                          className="ant-radio-button-inner"
+                        />
+                      </span>
+                      <span>
+                        Want to Read
+                      </span>
+                    </label>
+                    <label
+                      className="ant-radio-button-wrapper"
+                      onMouseEnter={undefined}
+                      onMouseLeave={undefined}
+                      style={undefined}
+                    >
+                      <span
+                        className="ant-radio-button"
+                        style={Object {}}
+                      >
+                        <input
+                          autoFocus={undefined}
+                          checked={false}
+                          className="ant-radio-button-input"
+                          disabled={false}
+                          id={undefined}
+                          name={undefined}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onClick={undefined}
+                          onFocus={[Function]}
+                          readOnly={undefined}
+                          tabIndex={undefined}
+                          type="radio"
+                          value="read"
+                        />
+                        <span
+                          className="ant-radio-button-inner"
+                        />
+                      </span>
+                      <span>
+                        Read
+                      </span>
+                    </label>
+                    <label
+                      className="ant-radio-button-wrapper"
+                      onMouseEnter={undefined}
+                      onMouseLeave={undefined}
+                      style={undefined}
+                    >
+                      <span
+                        className="ant-radio-button"
+                        style={Object {}}
+                      >
+                        <input
+                          autoFocus={undefined}
+                          checked={false}
+                          className="ant-radio-button-input"
+                          disabled={false}
+                          id={undefined}
+                          name={undefined}
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          onClick={undefined}
+                          onFocus={[Function]}
+                          readOnly={undefined}
+                          tabIndex={undefined}
+                          type="radio"
+                          value="none"
+                        />
+                        <span
+                          className="ant-radio-button-inner"
+                        />
+                      </span>
+                      <span>
+                        None
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="ant-divider ant-divider-horizontal"
+              />
+            </div>
+          </div>
+          <div
+            className="bookshelf"
+          >
+            <h2
+              className="bookshelf-title"
+            >
+              Want to Read
+            </h2>
+            <div>
+              <h3
+                className="empty-shelf"
+              >
+                Empty shelf ;(
+              </h3>
+              <div
+                className="ant-divider ant-divider-horizontal"
+              />
+            </div>
+          </div>
+          <div
+            className="bookshelf"
+          >
+            <h2
+              className="bookshelf-title"
+            >
+              Read
+            </h2>
+            <div>
+              <h3
+                className="empty-shelf"
+              >
+                Empty shelf ;(
+              </h3>
+              <div
+                className="ant-divider ant-divider-horizontal"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="open-search"
+        >
+          <a
+            href="/search"
+            onClick={[Function]}
+          >
+            <i
+              className="anticon anticon-plus-circle add-book-icon"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

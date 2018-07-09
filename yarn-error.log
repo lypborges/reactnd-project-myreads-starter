@@ -1,8 +1,8 @@
 Arguments: 
-  /Users/felipeborges/.asdf/installs/nodejs/10.4.0/bin/node /Users/felipeborges/.asdf/installs/nodejs/10.4.0/.npm/bin/yarn install
+  /Users/felipeborges/.asdf/installs/nodejs/10.4.0/bin/node /Users/felipeborges/.asdf/installs/nodejs/10.4.0/.npm/bin/yarn test -- -u --coverage
 
 PATH: 
-  /usr/local/opt/gettext/bin:/Users/felipeborges/.asdf/shims:/Users/felipeborges/.asdf/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/opt/gettext/bin:/Users/felipeborges/.asdf/bin
+  /usr/local/opt/gettext/bin:/Users/felipeborges/.asdf/shims:/Users/felipeborges/.asdf/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 Yarn version: 
   1.7.0
@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/felipeborges/GitHub/Udacity/reactnd-project-myreads-starter/package.json: Unexpected token } in JSON at position 353
+  SyntaxError: /Users/felipeborges/GitHub/Udacity/reactnd-project-myreads-starter/package.json: Unexpected string in JSON at position 956
       at JSON.parse (<anonymous>)
       at /Users/felipeborges/.asdf/installs/nodejs/10.4.0/.npm/lib/node_modules/yarn/lib/cli.js:1130:59
       at Generator.next (<anonymous>)
@@ -34,13 +34,12 @@ npm manifest:
       "react": "^16.3.2",
       "react-dom": "^16.3.2",
       "react-router-dom": "^4.3.1",
-      "throttle-debounce": "^2.0.0",
+      "throttle-debounce": "^2.0.0"
     },
     "devDependencies": {
       "babel-plugin-import": "^1.8.0",
       "enzyme": "^3.3.0",
       "enzyme-adapter-react-16": "^1.1.1",
-      "husky": "^0.14.3",
       "nightmare": "^3.0.1",
       "prettier": "1.13.6",
       "pretty-quick": "^1.6.0",
@@ -53,6 +52,13 @@ npm manifest:
       "test": "react-app-rewired test --env=jsdom",
       "eject": "react-scripts eject",
       "precommit": "pretty-quick --changed"
+    },
+    "jest": {
+      "collectCoverageFrom": [
+        "src/**/*.{js,jsx}",
+        "!src/tests/**"
+        "!src/setupTests.js"
+      ]
     }
   }
 
@@ -3663,14 +3669,6 @@ Lockfile:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
   
-  husky@^0.14.3:
-    version "0.14.3"
-    resolved "https://registry.yarnpkg.com/husky/-/husky-0.14.3.tgz#c69ed74e2d2779769a17ba8399b54ce0b63c12c3"
-    dependencies:
-      is-ci "^1.0.10"
-      normalize-path "^1.0.0"
-      strip-indent "^2.0.0"
-  
   iconv-lite@0.4.19:
     version "0.4.19"
     resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
@@ -5202,10 +5200,6 @@ Lockfile:
       is-builtin-module "^1.0.0"
       semver "2 || 3 || 4 || 5"
       validate-npm-package-license "^3.0.1"
-  
-  normalize-path@^1.0.0:
-    version "1.0.0"
-    resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-1.0.0.tgz#32d0e472f91ff345701c15a8311018d3b0a90379"
   
   normalize-path@^2.0.0, normalize-path@^2.0.1, normalize-path@^2.1.1:
     version "2.1.1"
@@ -7539,10 +7533,6 @@ Lockfile:
     dependencies:
       get-stdin "^4.0.1"
   
-  strip-indent@^2.0.0:
-    version "2.0.0"
-    resolved "https://registry.yarnpkg.com/strip-indent/-/strip-indent-2.0.0.tgz#5ef8db295d01e6ed6cbf7aab96998d7822527b68"
-  
   strip-json-comments@~2.0.1:
     version "2.0.1"
     resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
@@ -7963,10 +7953,6 @@ Lockfile:
     dependencies:
       querystringify "^2.0.0"
       requires-port "^1.0.0"
-  
-  url-search-params@^1.0.2:
-    version "1.0.2"
-    resolved "https://registry.yarnpkg.com/url-search-params/-/url-search-params-1.0.2.tgz#429958e9bf09f2c980f39dbde49de944efd93c88"
   
   url@^0.11.0:
     version "0.11.0"
