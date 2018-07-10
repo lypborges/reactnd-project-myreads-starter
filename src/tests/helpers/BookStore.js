@@ -49,7 +49,7 @@ const BooksData = [
     shelf: "currentlyReading"
   },
   {
-    title: "The Linux Command Line",
+    title: "AI",
     subtitle: "A Complete Introduction",
     authors: ["William E. Shotts, Jr."],
     publisher: "No Starch Press",

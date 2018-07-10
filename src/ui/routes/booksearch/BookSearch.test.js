@@ -1,6 +1,6 @@
 import BookSearch from "./BookSearch";
 import React from "react";
-import { mount } from "enzyme";
+import { render, fireEvent } from "react-testing-library";
 import { MemoryRouter } from "react-router-dom";
 import renderer from "react-test-renderer";
 import { BooksData } from "../../../tests/helpers/BookStore";
@@ -31,15 +31,15 @@ describe("Loading component layout", () => {
   it("call handle function passed as prop", () => {
     const myMock = jest.fn();
 
-    const wrapper = mount(
+    const { getByTestId } = render(
       <MemoryRouter>
         <BookSearch books={BooksData} handleSearch={myMock} />
       </MemoryRouter>
     );
 
-    wrapper
-      .find('[data-test="input-search"]')
-      .simulate("change", { target: { value: "linux book" } });
+    const inputSearchElement = getByTestId("input-search");
+    inputSearchElement.value = "linux book";
+    fireEvent.change(inputSearchElement);
 
     expect(myMock.mock.calls.length).toBe(1);
   });

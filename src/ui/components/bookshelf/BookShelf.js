@@ -20,7 +20,7 @@ class BookShelf extends Component {
       <div className="bookshelf">
         <h2 className="bookshelf-title">{title}</h2>
         {books.length > 0 ? (
-          <div className="bookshelf-books">
+          <div className="bookshelf-books" data-testid={`shelf ${title}`}>
             {books.map(book => {
               return (
                 <Book

@@ -53,10 +53,21 @@ class Book extends Component {
             size={"small"}
             onChange={this.handleChange}
           >
-            <Radio.Button value="currentlyReading">Reading</Radio.Button>
-            <Radio.Button value="wantToRead">Want to Read</Radio.Button>
-            <Radio.Button value="read">Read</Radio.Button>
-            <Radio.Button value="none">None</Radio.Button>
+            <Radio.Button
+              data-testid="button-currently-reading"
+              value="currentlyReading"
+            >
+              Reading
+            </Radio.Button>
+            <Radio.Button data-testid="button-want-to-read" value="wantToRead">
+              Want to Read
+            </Radio.Button>
+            <Radio.Button data-testid="button-read" value="read">
+              Read
+            </Radio.Button>
+            <Radio.Button data-testid="button-none" value="none">
+              None
+            </Radio.Button>
           </Radio.Group>
         </div>
       </div>

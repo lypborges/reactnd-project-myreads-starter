@@ -45,7 +45,7 @@ class BookSearch extends Component {
               </Link>
               <div className="search-books-input-wrapper">
                 <input
-                  data-test="input-search"
+                  data-testid="input-search"
                   type="text"
                   value={searchTerm}
                   onChange={this.handleSearch}

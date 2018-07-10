@@ -11,6 +11,7 @@ exports[`renders correctly with books 1`] = `
   </h2>
   <div
     className="bookshelf-books"
+    data-testid="shelf Reading"
   >
     <div
       className="bookshelf-container"
@@ -85,6 +86,7 @@ exports[`renders correctly with books 1`] = `
                 autoFocus={undefined}
                 checked={true}
                 className="ant-radio-button-input"
+                data-testid="button-currently-reading"
                 disabled={false}
                 id={undefined}
                 name={undefined}
@@ -119,6 +121,7 @@ exports[`renders correctly with books 1`] = `
                 autoFocus={undefined}
                 checked={false}
                 className="ant-radio-button-input"
+                data-testid="button-want-to-read"
                 disabled={false}
                 id={undefined}
                 name={undefined}
@@ -153,6 +156,7 @@ exports[`renders correctly with books 1`] = `
                 autoFocus={undefined}
                 checked={false}
                 className="ant-radio-button-input"
+                data-testid="button-read"
                 disabled={false}
                 id={undefined}
                 name={undefined}
@@ -187,6 +191,7 @@ exports[`renders correctly with books 1`] = `
                 autoFocus={undefined}
                 checked={false}
                 className="ant-radio-button-input"
+                data-testid="button-none"
                 disabled={false}
                 id={undefined}
                 name={undefined}
@@ -225,7 +230,7 @@ exports[`renders correctly with books 1`] = `
           className="ant-card-cover"
         >
           <img
-            alt="The Linux Command Line"
+            alt="AI"
             src="http://books.google.com/books/content?id=nggnmAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
             style={
               Object {
@@ -248,7 +253,7 @@ exports[`renders correctly with books 1`] = `
               <div
                 className="ant-card-meta-title"
               >
-                The Linux Command Line
+                AI
               </div>
               <div
                 className="ant-card-meta-description"
@@ -283,6 +288,7 @@ exports[`renders correctly with books 1`] = `
                 autoFocus={undefined}
                 checked={false}
                 className="ant-radio-button-input"
+                data-testid="button-currently-reading"
                 disabled={false}
                 id={undefined}
                 name={undefined}
@@ -317,6 +323,7 @@ exports[`renders correctly with books 1`] = `
                 autoFocus={undefined}
                 checked={false}
                 className="ant-radio-button-input"
+                data-testid="button-want-to-read"
                 disabled={false}
                 id={undefined}
                 name={undefined}
@@ -351,6 +358,7 @@ exports[`renders correctly with books 1`] = `
                 autoFocus={undefined}
                 checked={false}
                 className="ant-radio-button-input"
+                data-testid="button-read"
                 disabled={false}
                 id={undefined}
                 name={undefined}
@@ -385,6 +393,7 @@ exports[`renders correctly with books 1`] = `
                 autoFocus={undefined}
                 checked={true}
                 className="ant-radio-button-input"
+                data-testid="button-none"
                 disabled={false}
                 id={undefined}
                 name={undefined}
