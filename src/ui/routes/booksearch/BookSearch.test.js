@@ -28,7 +28,7 @@ describe("Loading component layout", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("returns true when called", () => {
+  it("call handle function passed as prop", () => {
     const myMock = jest.fn();
 
     const wrapper = mount(
